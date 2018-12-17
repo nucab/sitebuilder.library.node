@@ -559,6 +559,12 @@ module.exports = {
       commonjs: "react-beautiful-dnd",
       amd: "react-beautiful-dnd"
     },
+    "react-owl-carousel2": {
+      root: "react-owl-carousel2",
+      commonjs2: "react-owl-carousel2",
+      commonjs: "react-owl-carousel2",
+      amd: "react-owl-carousel2"
+    },
     "styled-components": {
       root: "styled-components",
       commonjs2: "styled-components",
