@@ -78,9 +78,7 @@ const Wrapper = styled.div`
     position: absolute;
     top: 40% !important;
     left: 48% !important;
-    width: 100%import { OwlCarousel } from 'react-owl-carousel2';
-;import { OwlCarousel } from 'react-owl-carousel2';
-
+    width: 100%;
     height: 100%;
     background: rgba(64, 119, 223, 0.7);
     opacity: 0;

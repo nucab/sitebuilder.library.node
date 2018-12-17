@@ -546,6 +546,24 @@ module.exports = {
       commonjs2: "@blueprintjs/icons",
       commonjs: "@blueprintjs/icons",
       amd: "@blueprintjs/icons"
+    },
+    reactstrap: {
+      root: "reactstrap",
+      commonjs2: "reactstrap",
+      commonjs: "reactstrap",
+      amd: "reactstrap"
+    },
+    "react-beautiful-dnd": {
+      root: "react-beautiful-dnd",
+      commonjs2: "react-beautiful-dnd",
+      commonjs: "react-beautiful-dnd",
+      amd: "react-beautiful-dnd"
+    },
+    "styled-components": {
+      root: "styled-components",
+      commonjs2: "styled-components",
+      commonjs: "styled-components",
+      amd: "styled-components"
     }
   },
   // Some libraries import Node modules but don't use them in the browser.
