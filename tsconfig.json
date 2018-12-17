@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "outDir": "./build",
+    "target": "es6",
+    "module": "commonjs",
+    "noImplicitAny": true,
+    // "strictNullChecks": true,
+    "declaration": true,
+    "sourceMap": true,
+    "jsx": "react",
+    "lib": ["dom", "esnext"]
+  },
+  "exclude": [
+    "node_modules",
+    "./src/lib/components/*.test.*",
+    "./src/lib/serviceWorker.ts",
+    "./src/demo/*.tsx"
+  ],
+  "include": ["./src/**/*.tsx", "./src/**/*.ts", "./typings/index.d.ts"]
+}
