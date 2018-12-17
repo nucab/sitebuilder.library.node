@@ -1,14 +1,19 @@
 {
   "compilerOptions": {
-    "outDir": "./build",
-    "target": "es5",
+    "target": "es6",
+    "allowJs": true,
+    "skipLibCheck": false,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
     "module": "commonjs",
-    "noImplicitAny": true,
-    // "strictNullChecks": true,
-    "declaration": true,
-    "sourceMap": true,
-    "jsx": "react",
-    "lib": ["dom", "esnext"]
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    // "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "preserve",
+    "declaration": true
   },
   "exclude": [
     "node_modules",

@@ -1,11 +1,8 @@
 import * as React from "react";
-import styled from "styled-components";
 import { Node as NodeType, CarouselNode } from "sitebuilder.client";
 import Node from "./Node";
 import Section from "./templates/Section";
 import Carousel from "./templates/Carousel";
-import ColumnControls from "./ColumnControls";
-import SectionControls from "./SectionControls";
 
 interface OwnProps {
   current?: number;
@@ -19,7 +16,7 @@ const defaultProps: OwnProps = {
 };
 
 const RenderNode: React.SFC<OwnProps> = props => {
-  const { dragControl, node } = props;
+  const { node } = props;
   if (!node) return null;
   const current = props.current ? props.current : 0;
   switch (node.type) {
@@ -27,24 +24,14 @@ const RenderNode: React.SFC<OwnProps> = props => {
       return (
         <>
           <Section node={node}>
-            <Node node={node} current={0} />
+            <Node node={node} current={current + 1} />
           </Section>
         </>
       );
     case "Section": {
-      if (node.attributes.type === "column") {
-        <ControlWrapper>
-          <Node node={node} current={current + 1} />
-          <ColumnControls dragControl={dragControl} />
-        </ControlWrapper>;
-        return <Node node={node} current={current + 1} />;
-      }
       return (
         <Section node={node}>
-          <ControlWrapper>
-            <Node node={node} current={0} />
-            <SectionControls />
-          </ControlWrapper>
+          <Node node={node} current={current + 1} />
         </Section>
       );
     }
@@ -58,12 +45,3 @@ const RenderNode: React.SFC<OwnProps> = props => {
 RenderNode.defaultProps = defaultProps;
 
 export default RenderNode;
-
-const ControlWrapper = styled.div`
-  position: relative;
-  &:hover {
-    .section-controls {
-      opacity: 1;
-    }
-  }
-`;
