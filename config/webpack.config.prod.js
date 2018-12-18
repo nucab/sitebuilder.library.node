@@ -449,6 +449,7 @@ module.exports = {
     // if (process.env.NODE_ENV === 'production') { ... }. See `./env.js`.
     // It is absolutely essential that NODE_ENV was set to production here.
     // Otherwise React will be compiled in the very slow development mode.
+
     new webpack.DefinePlugin(env.stringified),
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
@@ -484,6 +485,13 @@ module.exports = {
     //     new RegExp('/[^/]+\\.[^/]+$'),
     //   ],
     // }),
+
+    // Optimize the build output of blueprintjs/icons https://github.com/palantir/blueprint/issues/2193
+
+    // new webpack.NormalModuleReplacementPlugin(
+    //   /.*\/generated\/iconSvgPaths.*/,
+    //   path.resolve(__dirname, "test/emptyModule.js")
+    // ),
     // TypeScript type checking
     fs.existsSync(paths.appTsConfig) &&
       new ForkTsCheckerWebpackPlugin({
@@ -529,12 +537,12 @@ module.exports = {
       commonjs: "react-dom",
       amd: "react-dom"
     },
-    "react-icons": {
-      root: "react-icons",
-      commonjs2: "react-icons",
-      commonjs: "react-icons",
-      amd: "react-icons"
-    },
+    // "react-icons": {
+    //   root: "react-icons",
+    //   commonjs2: "react-icons",
+    //   commonjs: "react-icons",
+    //   amd: "react-icons"
+    // },
     "@blueprintjs/core": {
       root: "@blueprintjs/core",
       commonjs2: "@blueprintjs/core",
@@ -547,42 +555,42 @@ module.exports = {
       commonjs: "@blueprintjs/icons",
       amd: "@blueprintjs/icons"
     },
-    reactstrap: {
-      root: "reactstrap",
-      commonjs2: "reactstrap",
-      commonjs: "reactstrap",
-      amd: "reactstrap"
-    },
-    "react-beautiful-dnd": {
-      root: "react-beautiful-dnd",
-      commonjs2: "react-beautiful-dnd",
-      commonjs: "react-beautiful-dnd",
-      amd: "react-beautiful-dnd"
-    },
-    "react-owl-carousel2": {
-      root: "react-owl-carousel2",
-      commonjs2: "react-owl-carousel2",
-      commonjs: "react-owl-carousel2",
-      amd: "react-owl-carousel2"
-    },
+    // reactstrap: {
+    //   root: "reactstrap",
+    //   commonjs2: "reactstrap",
+    //   commonjs: "reactstrap",
+    //   amd: "reactstrap"
+    // },
+    // "react-beautiful-dnd": {
+    //   root: "react-beautiful-dnd",
+    //   commonjs2: "react-beautiful-dnd",
+    //   commonjs: "react-beautiful-dnd",
+    //   amd: "react-beautiful-dnd"
+    // },
+    // "react-owl-carousel2": {
+    //   root: "react-owl-carousel2",
+    //   commonjs2: "react-owl-carousel2",
+    //   commonjs: "react-owl-carousel2",
+    //   amd: "react-owl-carousel2"
+    // },
     "styled-components": {
       root: "styled-components",
       commonjs2: "styled-components",
       commonjs: "styled-components",
       amd: "styled-components"
-    },
-    formik: {
-      root: "formik",
-      commonjs2: "formik",
-      commonjs: "formik",
-      amd: "formik"
-    },
-    yup: {
-      root: "yup",
-      commonjs2: "yup",
-      commonjs: "yup",
-      amd: "yup"
     }
+    // formik: {
+    //   root: "formik",
+    //   commonjs2: "formik",
+    //   commonjs: "formik",
+    //   amd: "formik"
+    // },
+    // yup: {
+    //   root: "yup",
+    //   commonjs2: "yup",
+    //   commonjs: "yup",
+    //   amd: "yup"
+    // }
   },
   // Some libraries import Node modules but don't use them in the browser.
   // Tell Webpack to provide empty mocks for them so importing them works.
