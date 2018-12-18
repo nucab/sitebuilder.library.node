@@ -555,12 +555,12 @@ module.exports = {
       commonjs: "@blueprintjs/icons",
       amd: "@blueprintjs/icons"
     },
-    // reactstrap: {
-    //   root: "reactstrap",
-    //   commonjs2: "reactstrap",
-    //   commonjs: "reactstrap",
-    //   amd: "reactstrap"
-    // },
+    reactstrap: {
+      root: "reactstrap",
+      commonjs2: "reactstrap",
+      commonjs: "reactstrap",
+      amd: "reactstrap"
+    },
     // "react-beautiful-dnd": {
     //   root: "react-beautiful-dnd",
     //   commonjs2: "react-beautiful-dnd",
