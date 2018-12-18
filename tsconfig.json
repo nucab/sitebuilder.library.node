@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es6",
+    "target": "es5",
     "allowJs": true,
     "skipLibCheck": false,
     "esModuleInterop": true,
@@ -13,7 +13,8 @@
     // "isolatedModules": true,
     "noEmit": true,
     "jsx": "preserve",
-    "declaration": true
+    "declaration": true,
+    "lib": ["dom", "esnext"]
   },
   "exclude": [
     "node_modules",

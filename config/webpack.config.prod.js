@@ -570,6 +570,18 @@ module.exports = {
       commonjs2: "styled-components",
       commonjs: "styled-components",
       amd: "styled-components"
+    },
+    formik: {
+      root: "formik",
+      commonjs2: "formik",
+      commonjs: "formik",
+      amd: "formik"
+    },
+    yup: {
+      root: "yup",
+      commonjs2: "yup",
+      commonjs: "yup",
+      amd: "yup"
     }
   },
   // Some libraries import Node modules but don't use them in the browser.
