@@ -23,6 +23,8 @@ export default Section;
 const Wrapper = styled.section<{ styles: any }>`
   ${props => props.styles}
   position: relative;
+  flex-grow: 1;
+  overflow: hidden;
   .background {
     position: absolute;
   }

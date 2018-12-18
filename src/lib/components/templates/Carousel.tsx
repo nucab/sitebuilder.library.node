@@ -22,6 +22,7 @@ export default class Carousel extends React.Component<OwnProps, IState> {
           rewind: true,
           autoplay: true
         }}
+        style={{ width: "1170px" }}
       >
         {node.attributes.items.map((item, idx) => (
           <img key={idx} className="img-fluid" src={item.src} />
