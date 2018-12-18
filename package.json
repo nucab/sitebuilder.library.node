@@ -2,7 +2,7 @@
   "name": "sitebuilder.library.node",
   "version": "0.0.12",
   "description": "Stiebuilder library node.",
-  "main": "build/lib/index.js",
+  "main": "build/index.js",
   "scripts": {
     "analyze": "npm run build && source-map-explorer ./build/1.index.*",
     "start": "node scripts/start.js",
@@ -23,9 +23,7 @@
   },
   "homepage": "https://github.com/noahjohn9259/sitebuilder.library.node#readme",
   "license": "MIT",
-  "dependencies": {
-    "bootstrap": "^4.1.3"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/core": "7.1.0",
     "@svgr/webpack": "2.4.1",
@@ -44,6 +42,7 @@
     "babel-plugin-named-asset-import": "^0.2.3",
     "babel-preset-react-app": "^6.1.0",
     "bfj": "6.1.1",
+    "bootstrap": "^4.1.3",
     "case-sensitive-paths-webpack-plugin": "2.1.2",
     "chalk": "2.4.1",
     "copyfiles": "^2.1.0",

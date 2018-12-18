@@ -10,7 +10,7 @@ const config: any = {
     id: "header",
     type: "Header",
     attributes: {
-      template: 2,
+      template: 4,
       styles: {},
       navStyles: {},
       topStyles: {}

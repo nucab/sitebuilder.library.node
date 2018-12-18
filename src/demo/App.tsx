@@ -1,15 +1,17 @@
 import * as React from "react";
 import { Config } from "sitebuilder.client";
-import { Node } from "../lib";
+import { HeaderPanel, FooterPanel, Node } from "../lib";
 import defaults from "./config";
 import "../../node_modules/bootstrap/scss/bootstrap.scss";
 import { Container } from "reactstrap";
 
 interface OwnProps {}
-interface OwnState {}
+interface OwnState {
+  config: Config | null;
+}
 
 class App extends React.Component<OwnProps, OwnState> {
-  state = {
+  state: OwnState = {
     config: null
   };
   componentDidMount() {
@@ -26,7 +28,9 @@ class App extends React.Component<OwnProps, OwnState> {
     if (!page) return null;
     return (
       <Container>
+        <HeaderPanel header={config.header} />
         <Node node={page} />
+        <FooterPanel footer={config.footer} />
       </Container>
     );
   }
