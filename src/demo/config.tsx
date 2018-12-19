@@ -41,7 +41,8 @@ const config: any = {
     parent: "root",
     children: [
       "6a9c0034-f373-4c30-86ab-cdcf6a3504ac",
-      "6a9c0034-f373-4c30-86ab-cdcf6a3504ad"
+      "6a9c0034-f373-4c30-86ab-cdcf6a3504ad",
+      "6a9c0034-f373-4c30-86ab-cdcf6a3504af"
     ]
   },
   "6a9c0034-f373-4c30-86ab-cdcf6a3504ac": {
@@ -61,6 +62,15 @@ const config: any = {
     },
     parent: "9987f922-b31b-421f-981b-8784bf4f2342",
     children: ["ef0ae96d-f023-4c39-8f81-608cd203beeg"]
+  },
+  "6a9c0034-f373-4c30-86ab-cdcf6a3504af": {
+    id: "6a9c0034-f373-4c30-86ab-cdcf6a3504af",
+    type: "Section",
+    attributes: {
+      type: "row"
+    },
+    parent: "9987f922-b31b-421f-981b-8784bf4f2342",
+    children: ["ef0ae96d-f023-4c39-8f81-608cd203beeh"]
   },
   "ef0ae96d-f023-4c39-8f81-608cd203beef": {
     id: "ef0ae96d-f023-4c39-8f81-608cd203beef",
@@ -114,6 +124,34 @@ const config: any = {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullum inveniri verbum potest quod magis idem declaret Latine, quod Graece, quam declarat voluptas. In eo enim positum est id, quod dicimus esse expetendum. Duo Reges: constructio interrete. Hoc est non dividere, sed frangere. Illa videamus, quae a te de amicitia dicta sunt."
     },
     parent: "6a9c0034-f373-4c30-86ab-cdcf6a3504ad",
+    children: []
+  },
+  "ef0ae96d-f023-4c39-8f81-608cd203beeh": {
+    id: "ef0ae96d-f023-4c39-8f81-608cd203beeh",
+    type: "MultiProduct",
+    attributes: {
+      items: [
+        {
+          image: "https://picturepan2.github.io/spectre/img/osx-el-capitan.jpg",
+          title: "Ubuntu",
+          description:
+            "Empower every person and every organization on the planet to        achieve more."
+        },
+        {
+          image: "https://picturepan2.github.io/spectre/img/osx-el-capitan.jpg",
+          title: "Ubuntu",
+          description:
+            "Empower every person and every organization on the planet to        achieve more."
+        },
+        {
+          image: "https://picturepan2.github.io/spectre/img/osx-el-capitan.jpg",
+          title: "Ubuntu",
+          description:
+            "Empower every person and every organization on the planet to        achieve more."
+        }
+      ]
+    },
+    parent: "6a9c0034-f373-4c30-86ab-cdcf6a3504af",
     children: []
   }
 };

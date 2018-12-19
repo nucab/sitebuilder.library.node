@@ -561,6 +561,12 @@ module.exports = {
       commonjs: "reactstrap",
       amd: "reactstrap"
     },
+    respectre: {
+      root: "respectre",
+      commonjs2: "respectre",
+      commonjs: "respectre",
+      amd: "respectre"
+    },
     // "react-beautiful-dnd": {
     //   root: "react-beautiful-dnd",
     //   commonjs2: "react-beautiful-dnd",

@@ -1,9 +1,10 @@
 import * as React from "react";
 import { Config } from "sitebuilder.client";
 import { HeaderPanel, FooterPanel, Node } from "../lib";
-import config from "./config";
+import defaults from "./config";
+import "spectre.css/dist/spectre.css";
 // import "../../node_modules/bootstrap/scss/bootstrap.scss";
-import { Container } from "reactstrap";
+import { Container } from "respectre/layout";
 
 interface OwnProps {}
 interface OwnState {
@@ -15,7 +16,7 @@ class App extends React.Component<OwnProps, OwnState> {
     config: null
   };
   componentDidMount() {
-    const config = new Config(config);
+    const config = new Config(defaults);
     this.setState({ config });
   }
   render() {

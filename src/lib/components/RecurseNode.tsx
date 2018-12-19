@@ -15,10 +15,10 @@ export default class RecurseNode extends React.Component<OwnProps> {
         {node.children.map((node: NodeType) => {
           if (!node) return;
           if (node.type === "Section" && node.attributes.type === "row") {
-            return <RenderNode node={node} current={current} />;
+            return <RenderNode key={node.id} node={node} current={current} />;
           }
           if (node.type === "Section" && node.attributes.type === "column") {
-            return <RenderNode node={node} current={current} />;
+            return <RenderNode key={node.id} node={node} current={current} />;
           }
           return (
             <React.Fragment key={node.id}>
