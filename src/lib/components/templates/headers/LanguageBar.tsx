@@ -1,8 +1,8 @@
 import * as React from "react";
 
-interface IProps {}
+interface OwnProps {}
 
-const LanguageBar: React.SFC<IProps> = props => {
+const LanguageBar: React.SFC<OwnProps> = props => {
   return (
     <div className="d-flex align-items-center">
       <ul className="d-flex m-0">

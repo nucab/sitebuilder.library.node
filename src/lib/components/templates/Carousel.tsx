@@ -6,9 +6,9 @@ interface OwnProps {
   node: CarouselNode | null;
 }
 
-interface IState {}
+interface OwnState {}
 
-export default class Carousel extends React.Component<OwnProps, IState> {
+export default class Carousel extends React.Component<OwnProps, OwnState> {
   public render() {
     const { node } = this.props;
     if (!node) return;

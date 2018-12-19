@@ -1,3 +1,74 @@
 {
-  "extends": "tslint-config-airbnb"
+  "extends": ["tslint:recommended", "tslint-config-prettier", "tslint-react"],
+  "linterOptions": {
+    "exclude": [
+      "config/**/*.js",
+      "src/demo/serviceWorker.*",
+      "src/lib/react-app-env.d.*",
+      "node_modules/**/*.ts",
+      "coverage/lcov-report/*.js"
+    ]
+  },
+  "rules": {
+    "quotemark": [true, "double", "jsx-double"],
+    "ordered-imports": false,
+    "object-literal-sort-keys": false,
+    "arrow-parens": false,
+    "no-console": [false],
+    "no-unused-expression": true,
+    "comment-format": false,
+    "trailing-comma": false,
+    "no-shadowed-variable": false,
+    "align": false,
+    "ban": false,
+    "class-name": true,
+    "curly": false,
+    "no-use-before-declare": true,
+    "eofline": true,
+    "forin": true,
+    "indent": [true, "spaces", 2],
+    "no-empty-interface": false,
+    "member-access": false,
+    "interface-name": [true, "never-prefix"],
+    "jsdoc-format": true,
+    "jsx-no-lambda": false,
+    "jsx-no-multiline-js": false,
+    "jsx-boolean-value": false,
+    "react/jsx-boolean-value": true,
+    "label-position": true,
+    "member-ordering": false,
+    "no-any": false,
+    "no-arg": true,
+    "no-switch-case-fall-through": true,
+    "switch-default": true,
+    "triple-equals": [true, "allow-null-check"],
+    "typedef": [true, "parameter", "property-declaration"],
+    "typedef-whitespace": [
+      true,
+      {
+        "call-signature": "nospace",
+        "index-signature": "nospace",
+        "parameter": "nospace",
+        "property-declaration": "nospace",
+        "variable-declaration": "nospace"
+      }
+    ],
+    "variable-name": [
+      true,
+      "ban-keywords",
+      "check-format",
+      "allow-leading-underscore",
+      "allow-pascal-case"
+    ],
+    "whitespace": [
+      true,
+      "check-branch",
+      "check-decl",
+      "check-module",
+      "check-operator",
+      "check-separator",
+      "check-type",
+      "check-typecast"
+    ]
+  }
 }

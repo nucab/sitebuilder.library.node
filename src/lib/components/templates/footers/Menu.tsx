@@ -3,14 +3,14 @@ import { Navbar, Nav, NavItem, NavLink } from "reactstrap";
 import styled from "styled-components";
 import { Styles } from "sitebuilder.client";
 
-export interface IProps {
+export interface OwnProps {
   separator: boolean;
   center?: boolean;
   styles?: Styles | null;
   boxed?: boolean;
 }
 
-export default class Menu extends React.Component<IProps, any> {
+export default class Menu extends React.Component<OwnProps, any> {
   static defaultProps = {
     separator: false,
     center: false

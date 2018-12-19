@@ -3,11 +3,11 @@ import styled from "styled-components";
 // import Marquee from "react-marquee";
 import { MdNotifications } from "react-icons/md";
 
-export interface IProps {
+export interface OwnProps {
   children: any;
 }
 
-export function TextScroller(props: IProps) {
+export function TextScroller(props: OwnProps) {
   return (
     <Wrapper className="d-flex align-items-center">
       <div className="mr-2">

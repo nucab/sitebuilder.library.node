@@ -1,8 +1,8 @@
 import * as React from "react";
 import { Config } from "sitebuilder.client";
 import { HeaderPanel, FooterPanel, Node } from "../lib";
-import defaults from "./config";
-import "../../node_modules/bootstrap/scss/bootstrap.scss";
+import config from "./config";
+// import "../../node_modules/bootstrap/scss/bootstrap.scss";
 import { Container } from "reactstrap";
 
 interface OwnProps {}
@@ -15,7 +15,7 @@ class App extends React.Component<OwnProps, OwnState> {
     config: null
   };
   componentDidMount() {
-    const config = new Config(defaults);
+    const config = new Config(config);
     this.setState({ config });
   }
   render() {

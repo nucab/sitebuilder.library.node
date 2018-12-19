@@ -1,8 +1,8 @@
 import * as React from "react";
 
-interface IProps {}
+interface OwnProps {}
 
-const Logo: React.SFC<IProps> = props => {
+const Logo: React.SFC<OwnProps> = props => {
   return (
     <div className="p-2">
       <img

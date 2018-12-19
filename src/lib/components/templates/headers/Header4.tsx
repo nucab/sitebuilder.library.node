@@ -6,13 +6,13 @@ import Logo from "./Logo";
 import { TextScroller } from "./TextScroller";
 import { Styles } from "sitebuilder.client";
 
-export interface IProps {
+export interface OwnProps {
   styles: Styles | null;
   navStyles: Styles | null;
   topStyles: Styles | null;
 }
 
-const Header4: React.SFC<IProps> = props => {
+const Header4: React.SFC<OwnProps> = props => {
   console.log(props);
   return (
     <div style={props.styles ? props.styles : {}}>

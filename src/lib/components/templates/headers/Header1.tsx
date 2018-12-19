@@ -7,13 +7,13 @@ import Logo from "./Logo";
 import Topbar from "./Topbar";
 import { Styles } from "sitebuilder.client";
 
-export interface IProps {
+export interface OwnProps {
   styles: Styles | null;
   navStyles: Styles | null;
   topStyles: Styles | null;
 }
 
-const Header1: React.SFC<IProps> = props => {
+const Header1: React.SFC<OwnProps> = props => {
   return (
     <div style={props.styles ? props.styles : {}}>
       <Topbar boxed styles={props.topStyles ? props.topStyles : {}} />

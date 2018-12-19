@@ -4,12 +4,12 @@ import Menu from "./Menu";
 import CopyrightBar from "./CopyrightBar";
 import { Styles } from "sitebuilder.client";
 
-export interface IProps {
+export interface OwnProps {
   styles: Styles | null;
   navStyles: Styles | null;
 }
 
-const Footer1: React.SFC<IProps> = props => {
+const Footer1: React.SFC<OwnProps> = props => {
   return (
     <div style={props.styles ? props.styles : {}}>
       <Container>

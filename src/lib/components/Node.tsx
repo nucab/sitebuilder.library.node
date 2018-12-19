@@ -3,10 +3,10 @@ import { Node as NodeType } from "sitebuilder.client";
 import RenderNode from "./RenderNode";
 import RecurseNode from "./RecurseNode";
 
-type OwnProps = {
+interface OwnProps {
   node: NodeType | null;
   current?: number;
-};
+}
 
 export default class Node extends React.Component<OwnProps, any> {
   static defaultProps: Partial<OwnProps> = {

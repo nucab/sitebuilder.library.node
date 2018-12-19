@@ -2,12 +2,12 @@ import * as React from "react";
 import { Node as NodeType } from "sitebuilder.client";
 import RenderNode from "./RenderNode";
 
-interface IProps {
+interface OwnProps {
   node: NodeType;
   current: number;
 }
 
-export default class RecurseNode extends React.Component<IProps> {
+export default class RecurseNode extends React.Component<OwnProps> {
   render() {
     const { node, current } = this.props;
     return (

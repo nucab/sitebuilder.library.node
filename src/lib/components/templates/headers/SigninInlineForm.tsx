@@ -1,54 +1,70 @@
 import * as React from "react";
 import { Form, FormGroup, Input, Button } from "reactstrap";
+import RegisterModal from "./RegisterModal";
 
-interface IProps {
+interface OwnProps {
   formInline?: boolean;
 }
 
-const SigninInlineForm: React.SFC<IProps> = props => {
-  return (
-    <div className="px-0 py-2">
-      <Form inline={props.formInline} className="">
-        <FormGroup className="mr-sm-2">
-          <input
-            className="form-control"
-            size={15}
-            type="email"
-            name="email"
-            placeholder="游戏账号"
-          />
-        </FormGroup>
-        <FormGroup className="mr-sm-2">
-          <input
-            className="form-control"
-            type="password"
-            size={15}
-            name="password"
-            placeholder="密码"
-          />
-        </FormGroup>
-        <FormGroup className="mr-sm-2">
-          <input
-            className="form-control"
-            type="text"
-            name="valid"
-            placeholder="验证码"
-            size={10}
-          />
-        </FormGroup>
-        <Button type="submit" color="primary" className="mr-sm-2">
-          登录
-        </Button>
-        <Button type="submit" color="primary">
-          忘记密码
-        </Button>
-      </Form>
-    </div>
-  );
-};
+interface OwnState {
+  showRegisterModal: boolean;
+}
 
-SigninInlineForm.defaultProps = {
-  formInline: true
-};
+export default class SigninInlineForm extends React.Component<
+  OwnProps,
+  OwnState
+> {
+  static defaultProps = {
+    formInline: true
+  };
+  state = {
+    showRegisterModal: false
+  };
+  render() {
+    return (
+      <div className="px-0 py-2">
+        <Form inline={this.props.formInline}>
+          <FormGroup className="mr-sm-2">
+            <Input
+              size={15}
+              type="username"
+              name="username"
+              placeholder="Username"
+            />
+          </FormGroup>
+          <FormGroup className="mr-sm-2">
+            <Input
+              type="password"
+              size={15}
+              name="password"
+              placeholder="Password"
+            />
+          </FormGroup>
+          {/* <FormGroup className="mr-sm-2">
+            <Input
+              className="form-control"
+              type="text"
+              name="valid"
+              placeholder="验证码"
+              size={10}
+            />
+          </FormGroup> */}
+          <Button type="submit" color="primary" className="mr-sm-2">
+            Login
+          </Button>
+          <Button color="primary" onClick={this.handleToggleRegisterModal}>
+            Register
+          </Button>
+          <RegisterModal
+            show={this.state.showRegisterModal}
+            onToggle={this.handleToggleRegisterModal}
+          />
+        </Form>
+      </div>
+    );
+  }
 
-export default SigninInlineForm;
+  handleToggleRegisterModal = () => {
+    this.setState({ showRegisterModal: !this.state.showRegisterModal });
+  };
+}

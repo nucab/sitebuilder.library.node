@@ -6,9 +6,9 @@ import Description from "./Description";
 import Logo from "./Logo";
 import Menu from "./Menu";
 
-export interface IProps {}
+export interface OwnProps {}
 
-export default class Footer4 extends React.Component<IProps, any> {
+export default class Footer4 extends React.Component<OwnProps, any> {
   public render() {
     return (
       <Wrapper className="py-3">

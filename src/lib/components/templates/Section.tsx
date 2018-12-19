@@ -2,12 +2,12 @@ import * as React from "react";
 import styled from "styled-components";
 import { parseStyles } from "../utils";
 
-interface IProps {
+interface OwnProps {
   className?: string;
   node: any;
 }
 
-const Section: React.SFC<IProps> = props => {
+const Section: React.SFC<OwnProps> = props => {
   const styles = props.node.attributes
     ? parseStyles(props.node.attributes.styles)
     : "";

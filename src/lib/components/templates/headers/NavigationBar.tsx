@@ -17,7 +17,7 @@ import { Styles } from "sitebuilder.client";
 
 import "./navigation.scss";
 
-interface IProps {
+interface OwnProps {
   styles?: Styles | null;
   boxed?: boolean;
 }
@@ -25,7 +25,7 @@ interface IProps {
 const Boxed: React.SFC<{ boxed?: boolean }> = props =>
   props.boxed ? <Container>{props.children}</Container> : <>{props.children}</>;
 
-export default class NavigationBar extends React.Component<IProps> {
+export default class NavigationBar extends React.Component<OwnProps> {
   state = {
     isOpen: false
   };
@@ -36,7 +36,7 @@ export default class NavigationBar extends React.Component<IProps> {
     this.setState({
       isOpen: !this.state.isOpen
     });
-  }
+  };
   render() {
     return (
       <Wrapper

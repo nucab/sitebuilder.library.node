@@ -4,7 +4,7 @@ import styled from "styled-components";
 import LanguageBar from "./LanguageBar";
 import { Styles } from "sitebuilder.client";
 
-interface IProps {
+interface OwnProps {
   styles?: Styles | null;
   boxed?: boolean;
 }
@@ -12,7 +12,7 @@ interface IProps {
 const Boxed: React.SFC<{ boxed?: boolean }> = props =>
   props.boxed ? <Container>{props.children}</Container> : <>{props.children}</>;
 
-const Topbar: React.SFC<IProps> = props => {
+const Topbar: React.SFC<OwnProps> = props => {
   return (
     <Wrapper
       className="d-none d-md-block"

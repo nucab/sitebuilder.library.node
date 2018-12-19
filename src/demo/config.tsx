@@ -39,7 +39,10 @@ const config: any = {
       title: "Default Page"
     },
     parent: "root",
-    children: ["6a9c0034-f373-4c30-86ab-cdcf6a3504ac"]
+    children: [
+      "6a9c0034-f373-4c30-86ab-cdcf6a3504ac",
+      "6a9c0034-f373-4c30-86ab-cdcf6a3504ad"
+    ]
   },
   "6a9c0034-f373-4c30-86ab-cdcf6a3504ac": {
     id: "6a9c0034-f373-4c30-86ab-cdcf6a3504ac",
@@ -49,6 +52,15 @@ const config: any = {
     },
     parent: "9987f922-b31b-421f-981b-8784bf4f2342",
     children: ["ef0ae96d-f023-4c39-8f81-608cd203beef"]
+  },
+  "6a9c0034-f373-4c30-86ab-cdcf6a3504ad": {
+    id: "6a9c0034-f373-4c30-86ab-cdcf6a3504ad",
+    type: "Section",
+    attributes: {
+      type: "row"
+    },
+    parent: "9987f922-b31b-421f-981b-8784bf4f2342",
+    children: ["ef0ae96d-f023-4c39-8f81-608cd203beeg"]
   },
   "ef0ae96d-f023-4c39-8f81-608cd203beef": {
     id: "ef0ae96d-f023-4c39-8f81-608cd203beef",
@@ -90,6 +102,18 @@ const config: any = {
       }
     },
     parent: "6a9c0034-f373-4c30-86ab-cdcf6a3504ac",
+    children: []
+  },
+  "ef0ae96d-f023-4c39-8f81-608cd203beeg": {
+    id: "ef0ae96d-f023-4c39-8f81-608cd203beeg",
+    type: "PlainText",
+    attributes: {
+      headingTag: "h1",
+      heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      content:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullum inveniri verbum potest quod magis idem declaret Latine, quod Graece, quam declarat voluptas. In eo enim positum est id, quod dicimus esse expetendum. Duo Reges: constructio interrete. Hoc est non dividere, sed frangere. Illa videamus, quae a te de amicitia dicta sunt."
+    },
+    parent: "6a9c0034-f373-4c30-86ab-cdcf6a3504ad",
     children: []
   }
 };

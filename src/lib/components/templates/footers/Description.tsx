@@ -2,13 +2,13 @@ import * as React from "react";
 import cx from "classnames";
 import styled from "styled-components";
 
-interface IProps {
+interface OwnProps {
   center?: boolean;
   separator?: boolean;
   theme?: "light" | "dark";
 }
 
-const Description: React.SFC<IProps> = props => {
+const Description: React.SFC<OwnProps> = props => {
   return (
     <Wrapper
       separator={props.separator}

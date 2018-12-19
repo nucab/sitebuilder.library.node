@@ -4,9 +4,9 @@ import styled from "styled-components";
 import Menu from "./Menu";
 import CopyrightBar from "./CopyrightBar";
 
-export interface IProps {}
+export interface OwnProps {}
 
-export default class Footer2 extends React.Component<IProps, any> {
+export default class Footer2 extends React.Component<OwnProps, any> {
   public render() {
     return (
       <Wrapper className="text-white py-3">

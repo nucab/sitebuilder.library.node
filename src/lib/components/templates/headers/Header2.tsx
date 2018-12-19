@@ -4,13 +4,13 @@ import Logo from "./Logo";
 import { Container } from "reactstrap";
 import { Styles } from "sitebuilder.client";
 
-export interface IProps {
+export interface OwnProps {
   styles: Styles | null;
   navStyles: Styles | null;
   topStyles: Styles | null;
 }
 
-const Header2: React.SFC<IProps> = props => {
+const Header2: React.SFC<OwnProps> = props => {
   return (
     <div style={props.styles ? props.styles : {}}>
       <Container>

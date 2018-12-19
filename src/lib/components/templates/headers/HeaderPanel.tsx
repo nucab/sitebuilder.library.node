@@ -6,11 +6,11 @@ import Header4 from "./Header4";
 import { parseStyles } from "../../utils";
 import { HeaderNode, Styles } from "sitebuilder.client";
 
-interface IProps {
+interface OwnProps {
   header: HeaderNode | null;
 }
 
-const HeaderPanel: React.SFC<IProps> = props => {
+const HeaderPanel: React.SFC<OwnProps> = props => {
   let template = 1;
   let styles: Styles | null = null;
   let navStyles: Styles | null = null;
@@ -41,8 +41,9 @@ const HeaderPanel: React.SFC<IProps> = props => {
       return <Header3 {...headerProps} />;
     case 4:
       return <Header4 {...headerProps} />;
+    default:
+      return null;
   }
-  return null;
 };
 
 export default HeaderPanel;

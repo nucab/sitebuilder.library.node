@@ -4,9 +4,9 @@ import Logo from "./Logo";
 import Menu from "./Menu";
 import styled from "styled-components";
 
-export interface IProps {}
+export interface OwnProps {}
 
-export default class Footer3 extends React.Component<IProps, any> {
+export default class Footer3 extends React.Component<OwnProps, any> {
   public render() {
     return (
       <Wrapper className="text-white py-3">

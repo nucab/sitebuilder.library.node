@@ -7,11 +7,11 @@ import Footer5 from "./Footer5";
 import { FooterNode, Styles } from "sitebuilder.client";
 import { parseStyles } from "../../utils";
 
-interface IProps {
+interface OwnProps {
   footer: FooterNode | null;
 }
 
-const FooterPanel: React.SFC<IProps> = props => {
+const FooterPanel: React.SFC<OwnProps> = props => {
   let template = 1;
   let styles: Styles | null = null;
   let navStyles: Styles | null = null;
@@ -40,8 +40,9 @@ const FooterPanel: React.SFC<IProps> = props => {
       return <Footer4 {...footerProps} />;
     case 5:
       return <Footer5 {...footerProps} />;
+    default:
+      return null;
   }
-  return null;
 };
 
 export default FooterPanel;

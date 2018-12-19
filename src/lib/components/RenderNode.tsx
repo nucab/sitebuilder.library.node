@@ -1,8 +1,13 @@
 import * as React from "react";
-import { Node as NodeType, CarouselNode } from "sitebuilder.client";
+import {
+  Node as NodeType,
+  CarouselNode,
+  PlainTextNode
+} from "sitebuilder.client";
 import Node from "./Node";
 import Section from "./templates/Section";
 import Carousel from "./templates/Carousel";
+import PlainText from "./templates/PlainText";
 
 interface OwnProps {
   current?: number;
@@ -37,6 +42,8 @@ const RenderNode: React.SFC<OwnProps> = props => {
     }
     case "Carousel":
       return <Carousel node={node as CarouselNode} />;
+    case "PlainText":
+      return <PlainText node={node as PlainTextNode} />;
     default:
       return null;
   }
