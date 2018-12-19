@@ -4,9 +4,18 @@ import FooterPanel from "./components/templates/footers/FooterPanel";
 import Section from "./components/templates/Section";
 import Carousel from "./components/templates/Carousel";
 import PlainText from "./components/templates/PlainText";
+import MultiProduct from "./components/templates/MultiProduct";
 
 import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
-export { Node, HeaderPanel, FooterPanel, Section, Carousel, PlainText };
+export {
+  Node,
+  HeaderPanel,
+  FooterPanel,
+  Section,
+  Carousel,
+  PlainText,
+  MultiProduct
+};
 
 export default Node;
