@@ -2,7 +2,8 @@
   "name": "sitebuilder.library.node",
   "version": "0.0.20",
   "description": "Stiebuilder library node.",
-  "main": "build/index.js",
+  "main": "./build/index.js",
+  "types": "./build/lib/index.d.ts",
   "scripts": {
     "analyze": "npm run build && source-map-explorer ./build/index.*",
     "start": "node scripts/start.js",
