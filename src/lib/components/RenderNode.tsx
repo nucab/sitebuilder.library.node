@@ -3,13 +3,15 @@ import {
   Node as NodeType,
   PlainTextNode,
   MultiProductNode,
-  CarouselNode
+  CarouselNode,
+  GraphicPlateNode
 } from "sitebuilder.client";
 import Node from "./Node";
 import Section from "./templates/Section";
 import Carousel from "./templates/Carousel";
 import PlainText from "./templates/PlainText";
 import MultiProduct from "./templates/MultiProduct";
+import GraphicPlate from "./templates/GraphicPlate";
 
 interface OwnProps {
   current?: number;
@@ -48,6 +50,8 @@ const RenderNode: React.SFC<OwnProps> = props => {
       return <MultiProduct node={node as MultiProductNode} />;
     case "Carousel":
       return <Carousel node={node as CarouselNode} />;
+    case "GraphicPlate":
+      return <GraphicPlate node={node as GraphicPlateNode} />;
     default:
       return null;
   }

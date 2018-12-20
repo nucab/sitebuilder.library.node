@@ -5,6 +5,7 @@ import Section from "./components/templates/Section";
 import Carousel from "./components/templates/Carousel";
 import PlainText from "./components/templates/PlainText";
 import MultiProduct from "./components/templates/MultiProduct";
+import GraphicPlate from "./components/templates/GraphicPlate";
 
 import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
@@ -15,7 +16,8 @@ export {
   Section,
   Carousel,
   PlainText,
-  MultiProduct
+  MultiProduct,
+  GraphicPlate
 };
 
 export default Node;
