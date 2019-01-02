@@ -38,6 +38,7 @@ const RenderNode: React.SFC<OwnProps> = props => {
         </>
       );
     case "Section": {
+      console.log(current);
       return (
         <Section node={node}>
           <Node node={node} current={current + 1} />

@@ -1,4 +1,4 @@
-const config: any = {
+const config = {
   root: {
     id: "root",
     type: "Root",
@@ -10,7 +10,7 @@ const config: any = {
     id: "header",
     type: "Header",
     attributes: {
-      template: 4,
+      template: 1,
       styles: {},
       navStyles: {},
       topStyles: {}
@@ -22,7 +22,7 @@ const config: any = {
     id: "footer",
     type: "Footer",
     attributes: {
-      template: 3,
+      template: 1,
       styles: {},
       navStyles: {},
       topStyles: {}
@@ -41,9 +41,8 @@ const config: any = {
     parent: "root",
     children: [
       "6a9c0034-f373-4c30-86ab-cdcf6a3504ac",
-      "6a9c0034-f373-4c30-86ab-cdcf6a3504ad",
-      "6a9c0034-f373-4c30-86ab-cdcf6a3504af",
-      "6a9c0034-f373-4c30-86ab-cdcf6a3504ag"
+      "524e674b-f1ba-48ac-9889-4441584fe635",
+      "5224614e-25fc-42be-b90d-fbcafa9aad85"
     ]
   },
   "6a9c0034-f373-4c30-86ab-cdcf6a3504ac": {
@@ -54,33 +53,6 @@ const config: any = {
     },
     parent: "9987f922-b31b-421f-981b-8784bf4f2342",
     children: ["ef0ae96d-f023-4c39-8f81-608cd203beef"]
-  },
-  "6a9c0034-f373-4c30-86ab-cdcf6a3504ad": {
-    id: "6a9c0034-f373-4c30-86ab-cdcf6a3504ad",
-    type: "Section",
-    attributes: {
-      type: "row"
-    },
-    parent: "9987f922-b31b-421f-981b-8784bf4f2342",
-    children: ["ef0ae96d-f023-4c39-8f81-608cd203beeg"]
-  },
-  "6a9c0034-f373-4c30-86ab-cdcf6a3504af": {
-    id: "6a9c0034-f373-4c30-86ab-cdcf6a3504af",
-    type: "Section",
-    attributes: {
-      type: "row"
-    },
-    parent: "9987f922-b31b-421f-981b-8784bf4f2342",
-    children: ["ef0ae96d-f023-4c39-8f81-608cd203beeh"]
-  },
-  "6a9c0034-f373-4c30-86ab-cdcf6a3504ag": {
-    id: "6a9c0034-f373-4c30-86ab-cdcf6a3504ag",
-    type: "Section",
-    attributes: {
-      type: "row"
-    },
-    parent: "9987f922-b31b-421f-981b-8784bf4f2342",
-    children: ["ef0ae96d-f023-4c39-8f81-608cd203beei"]
   },
   "ef0ae96d-f023-4c39-8f81-608cd203beef": {
     id: "ef0ae96d-f023-4c39-8f81-608cd203beef",
@@ -124,57 +96,72 @@ const config: any = {
     parent: "6a9c0034-f373-4c30-86ab-cdcf6a3504ac",
     children: []
   },
-  "ef0ae96d-f023-4c39-8f81-608cd203beeg": {
-    id: "ef0ae96d-f023-4c39-8f81-608cd203beeg",
+  "524e674b-f1ba-48ac-9889-4441584fe635": {
+    id: "524e674b-f1ba-48ac-9889-4441584fe635",
+    type: "Section",
+    attributes: {
+      type: "row",
+      styles: {
+        paddingBottom: 30,
+        paddingTop: 30
+      }
+    },
+    parent: "9987f922-b31b-421f-981b-8784bf4f2342",
+    children: ["ad054134-a0de-4289-9677-0a23f7b8d8d4"]
+  },
+  "ad054134-a0de-4289-9677-0a23f7b8d8d4": {
+    id: "ad054134-a0de-4289-9677-0a23f7b8d8d4",
     type: "PlainText",
     attributes: {
-      headingTag: "h1",
-      heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      heading: "<h2>The best service products are rich</h2>",
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullum inveniri verbum potest quod magis idem declaret Latine, quod Graece, quam declarat voluptas. In eo enim positum est id, quod dicimus esse expetendum. Duo Reges: constructio interrete. Hoc est non dividere, sed frangere. Illa videamus, quae a te de amicitia dicta sunt."
+        "Quoniam, si dis placet, ab Epicuro loqui discimus. Ergo ita: non posse honeste vivi, nisi honeste vivatur? Saepe ab Aristotele, a Theophrasto mirabiliter est laudata per se ipsa rerum scientia; Quae quo sunt excelsiores, eo dant clariora indicia naturae. Duo Reges: constructio interrete. Illum mallem levares, quo optimum atque humanissimum virum, Cn. Et quidem iure fortasse, sed tamen non gravissimum est testimonium multitudinis. Quo modo autem philosophus loquitur?"
     },
-    parent: "6a9c0034-f373-4c30-86ab-cdcf6a3504ad",
+    parent: "524e674b-f1ba-48ac-9889-4441584fe635",
     children: []
   },
-  "ef0ae96d-f023-4c39-8f81-608cd203beeh": {
-    id: "ef0ae96d-f023-4c39-8f81-608cd203beeh",
+  "5224614e-25fc-42be-b90d-fbcafa9aad85": {
+    id: "5224614e-25fc-42be-b90d-fbcafa9aad85",
+    type: "Section",
+    attributes: {
+      type: "row",
+      styles: {
+        paddingBottom: 30,
+        paddingTop: 30
+      }
+    },
+    parent: "9987f922-b31b-421f-981b-8784bf4f2342",
+    children: ["3f3e1b1b-be74-43dd-99d5-b2ac864ca359"]
+  },
+  "3f3e1b1b-be74-43dd-99d5-b2ac864ca359": {
+    id: "3f3e1b1b-be74-43dd-99d5-b2ac864ca359",
     type: "MultiProduct",
     attributes: {
       items: [
         {
-          image: "https://picturepan2.github.io/spectre/img/osx-el-capitan.jpg",
-          title: "Ubuntu",
+          id: "3d7d7250-0853-11e9-b568-0800200c9a66",
+          image: "https://yakuthemes.com/gameforest/img/game/game-1.jpg",
+          title: "<h3>Assassin's Creed Syndicate</h3>",
           description:
-            "Empower every person and every organization on the planet to        achieve more."
+            "Defeating the corrupt tyrants entrenched there will require not only strength, but leadership."
         },
         {
-          image: "https://picturepan2.github.io/spectre/img/osx-el-capitan.jpg",
-          title: "Ubuntu",
+          id: "654a0b90-0853-11e9-b568-0800200c9a66",
+          image: "https://yakuthemes.com/gameforest/img/game/game-2.jpg",
+          title: "<h3>Rise of the Tomb Raider</h3>",
           description:
-            "Empower every person and every organization on the planet to        achieve more."
+            "Tomb Raider, Lara becomes more than a survivor as she embarks on her first great."
         },
         {
-          image: "https://picturepan2.github.io/spectre/img/osx-el-capitan.jpg",
-          title: "Ubuntu",
+          id: "7a203670-0853-11e9-b568-0800200c9a66",
+          image: "https://yakuthemes.com/gameforest/img/game/game-3.jpg",
+          title: "<h3>The Witcher 3: Wild Hunt</h3>",
           description:
-            "Empower every person and every organization on the planet to        achieve more."
+            "The world is in chaos. The air is thick with tension and the smoke of burnt villages."
         }
       ]
     },
-    parent: "6a9c0034-f373-4c30-86ab-cdcf6a3504af",
-    children: []
-  },
-  "ef0ae96d-f023-4c39-8f81-608cd203beei": {
-    id: "ef0ae96d-f023-4c39-8f81-608cd203beei",
-    type: "GraphicPlate",
-    attributes: {
-      image: "https://picturepan2.github.io/spectre/img/osx-el-capitan.jpg",
-      headingTag: "h1",
-      heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullum inveniri verbum potest quod magis idem declaret Latine, quod Graece, quam declarat voluptas. In eo enim positum est id, quod dicimus esse expetendum. Duo Reges: constructio interrete. Hoc est non dividere, sed frangere. Illa videamus, quae a te de amicitia dicta sunt."
-    },
-    parent: "6a9c0034-f373-4c30-86ab-cdcf6a3504ag",
+    parent: "5224614e-25fc-42be-b90d-fbcafa9aad85",
     children: []
   }
 };

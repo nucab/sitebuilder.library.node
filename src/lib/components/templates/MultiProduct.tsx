@@ -1,6 +1,7 @@
 import * as React from "react";
 import { MultiProductNode, ProductAttributes } from "sitebuilder.client";
 import { Cols, Col } from "respectre/layout";
+import renderHTML from "react-render-html";
 
 interface OwnProps {
   node: MultiProductNode | null;
@@ -16,7 +17,7 @@ export default class MultiProduct extends React.Component<OwnProps, any> {
       <Cols>
         {items.map((item: ProductAttributes, idx: number) => (
           <Col key={idx} size={12 / size}>
-            <div className="card">
+            <div className="card" style={{height: '100%'}}>
               <div className="card-image">
                 <img
                   className="img-responsive"
@@ -25,8 +26,8 @@ export default class MultiProduct extends React.Component<OwnProps, any> {
                 />
               </div>
               <div className="card-body">
-                <div className="card-title h5">{item.title}</div>
-                {item.description}
+                <div className="card-title h5">{renderHTML(item.title)}</div>
+                {renderHTML(item.description)}
               </div>
             </div>
           </Col>

@@ -7,7 +7,7 @@ import PlainText from "./components/templates/PlainText";
 import MultiProduct from "./components/templates/MultiProduct";
 import GraphicPlate from "./components/templates/GraphicPlate";
 
-import "../../node_modules/bootstrap/scss/bootstrap.scss";
+// import "bootstrap/scss/bootstrap.scss";
 
 export {
   Node,

@@ -6,6 +6,7 @@ declare module "respectre/elements";
 declare module "respectre/layout";
 declare module "respectre/utilities";
 declare module "respectre/experimentals";
+declare module "react-render-html";
 
 interface Window {
   __EDIT_MODE__: boolean;
