@@ -16,7 +16,7 @@ export default class MultiProduct extends React.Component<OwnProps, any> {
     return (
       <Cols>
         {items.map((item: ProductAttributes, idx: number) => (
-          <Col key={idx} size={12 / size}>
+          <Col column key={idx} size={12 / size}>
             <div className="card" style={{ height: "100%" }}>
               <div className="card-image">
                 <img

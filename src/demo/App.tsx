@@ -32,7 +32,7 @@ class App extends React.Component<OwnProps, OwnState> {
     });
     if (!page) return null;
     return (
-      <Container>
+      <Container size="xl">
         {/* <HeaderPanel header={config.header} /> */}
         <Node node={page} />
         <FooterPanel footer={config.footer} />
