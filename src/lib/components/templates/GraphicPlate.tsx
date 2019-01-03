@@ -8,23 +8,21 @@ interface OwnProps {
   node: GraphicPlateNode | null;
 }
 
-class GraphicPlate extends React.Component<OwnProps> {
+export default class GraphicPlate extends React.Component<OwnProps> {
   render() {
     const { node } = this.props;
     if (!node) return null;
     const { image, heading, content } = node.attributes;
     return (
       <Cols>
-        <Col size="6">
+        <Col column size="6">
           <Img src={image} type="img-responsive" alt={node.id} />
         </Col>
-        <Col size="6">
-          {renderHTML(heading)}
-          {renderHTML(content)}
+        <Col column size="6">
+          <div>{renderHTML(heading)}</div>
+          <div>{renderHTML(content)}</div>
         </Col>
       </Cols>
     );
   }
 }
-
-export default GraphicPlate;

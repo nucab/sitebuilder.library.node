@@ -4,7 +4,10 @@ const config = {
     type: "Root",
     attributes: {},
     parent: null,
-    children: ["9987f922-b31b-421f-981b-8784bf4f2342"]
+    children: [
+      "336ab6b1-a1a8-45e3-a5c2-8ca2850f012d",
+      "04598659-9ccd-45f6-b749-4facd13e5eac"
+    ]
   },
   header: {
     id: "header",
@@ -24,14 +27,13 @@ const config = {
     attributes: {
       template: 1,
       styles: {},
-      navStyles: {},
-      topStyles: {}
+      navStyles: {}
     },
     parent: null,
     children: []
   },
-  "9987f922-b31b-421f-981b-8784bf4f2342": {
-    id: "9987f922-b31b-421f-981b-8784bf4f2342",
+  "336ab6b1-a1a8-45e3-a5c2-8ca2850f012d": {
+    id: "336ab6b1-a1a8-45e3-a5c2-8ca2850f012d",
     type: "Page",
     attributes: {
       path: "/",
@@ -40,22 +42,29 @@ const config = {
     },
     parent: "root",
     children: [
-      "6a9c0034-f373-4c30-86ab-cdcf6a3504ac",
-      "524e674b-f1ba-48ac-9889-4441584fe635",
-      "5224614e-25fc-42be-b90d-fbcafa9aad85"
+      "a0121bc3-d241-4614-92af-7cc7681240f9",
+      "fbf86c2c-42d5-4cee-97a2-d989910cba85",
+      "3c2a4b6f-94c1-4926-b43b-9c10a73ecc74",
+      "f0785c8c-fe41-41cd-a93c-22eb8e7112ba",
+      "225a6615-21ea-4866-97be-8fc33095e4aa",
+      "f9277f8c-e72e-4c4c-84c0-fae1a571780f"
     ]
   },
-  "6a9c0034-f373-4c30-86ab-cdcf6a3504ac": {
-    id: "6a9c0034-f373-4c30-86ab-cdcf6a3504ac",
+  "a0121bc3-d241-4614-92af-7cc7681240f9": {
+    id: "a0121bc3-d241-4614-92af-7cc7681240f9",
     type: "Section",
     attributes: {
-      type: "row"
+      type: "row",
+      styles: {
+        paddingBottom: 30,
+        paddingTop: 30
+      }
     },
-    parent: "9987f922-b31b-421f-981b-8784bf4f2342",
-    children: ["ef0ae96d-f023-4c39-8f81-608cd203beef"]
+    parent: "336ab6b1-a1a8-45e3-a5c2-8ca2850f012d",
+    children: ["788e4de3-bc7a-4300-b263-a1436a927b84"]
   },
-  "ef0ae96d-f023-4c39-8f81-608cd203beef": {
-    id: "ef0ae96d-f023-4c39-8f81-608cd203beef",
+  "788e4de3-bc7a-4300-b263-a1436a927b84": {
+    id: "788e4de3-bc7a-4300-b263-a1436a927b84",
     type: "Carousel",
     attributes: {
       items: [
@@ -93,11 +102,11 @@ const config = {
         autoplay: false
       }
     },
-    parent: "6a9c0034-f373-4c30-86ab-cdcf6a3504ac",
+    parent: "a0121bc3-d241-4614-92af-7cc7681240f9",
     children: []
   },
-  "524e674b-f1ba-48ac-9889-4441584fe635": {
-    id: "524e674b-f1ba-48ac-9889-4441584fe635",
+  "fbf86c2c-42d5-4cee-97a2-d989910cba85": {
+    id: "fbf86c2c-42d5-4cee-97a2-d989910cba85",
     type: "Section",
     attributes: {
       type: "row",
@@ -106,22 +115,22 @@ const config = {
         paddingTop: 30
       }
     },
-    parent: "9987f922-b31b-421f-981b-8784bf4f2342",
-    children: ["ad054134-a0de-4289-9677-0a23f7b8d8d4"]
+    parent: "336ab6b1-a1a8-45e3-a5c2-8ca2850f012d",
+    children: ["f48fbcbd-ccb6-45b3-bb34-50d4b4735fed"]
   },
-  "ad054134-a0de-4289-9677-0a23f7b8d8d4": {
-    id: "ad054134-a0de-4289-9677-0a23f7b8d8d4",
+  "f48fbcbd-ccb6-45b3-bb34-50d4b4735fed": {
+    id: "f48fbcbd-ccb6-45b3-bb34-50d4b4735fed",
     type: "PlainText",
     attributes: {
-      heading: "<h2>The best service products are rich</h2>",
+      heading: "<h2 style=\"text-align:center;\">Recent Games</h2>",
       content:
-        "Quoniam, si dis placet, ab Epicuro loqui discimus. Ergo ita: non posse honeste vivi, nisi honeste vivatur? Saepe ab Aristotele, a Theophrasto mirabiliter est laudata per se ipsa rerum scientia; Quae quo sunt excelsiores, eo dant clariora indicia naturae. Duo Reges: constructio interrete. Illum mallem levares, quo optimum atque humanissimum virum, Cn. Et quidem iure fortasse, sed tamen non gravissimum est testimonium multitudinis. Quo modo autem philosophus loquitur?"
+        "<p style=\"text-align:center;\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>"
     },
-    parent: "524e674b-f1ba-48ac-9889-4441584fe635",
+    parent: "fbf86c2c-42d5-4cee-97a2-d989910cba85",
     children: []
   },
-  "5224614e-25fc-42be-b90d-fbcafa9aad85": {
-    id: "5224614e-25fc-42be-b90d-fbcafa9aad85",
+  "3c2a4b6f-94c1-4926-b43b-9c10a73ecc74": {
+    id: "3c2a4b6f-94c1-4926-b43b-9c10a73ecc74",
     type: "Section",
     attributes: {
       type: "row",
@@ -130,30 +139,30 @@ const config = {
         paddingTop: 30
       }
     },
-    parent: "9987f922-b31b-421f-981b-8784bf4f2342",
-    children: ["3f3e1b1b-be74-43dd-99d5-b2ac864ca359"]
+    parent: "336ab6b1-a1a8-45e3-a5c2-8ca2850f012d",
+    children: ["fb12c8f9-47fb-425d-a973-c7763df6b37d"]
   },
-  "3f3e1b1b-be74-43dd-99d5-b2ac864ca359": {
-    id: "3f3e1b1b-be74-43dd-99d5-b2ac864ca359",
+  "fb12c8f9-47fb-425d-a973-c7763df6b37d": {
+    id: "fb12c8f9-47fb-425d-a973-c7763df6b37d",
     type: "MultiProduct",
     attributes: {
       items: [
         {
-          id: "3d7d7250-0853-11e9-b568-0800200c9a66",
+          id: "721505ef-b6ea-47e5-8eb6-3d8bea798392",
           image: "https://yakuthemes.com/gameforest/img/game/game-1.jpg",
           title: "<h3>Assassin's Creed Syndicate</h3>",
           description:
             "Defeating the corrupt tyrants entrenched there will require not only strength, but leadership."
         },
         {
-          id: "654a0b90-0853-11e9-b568-0800200c9a66",
+          id: "f166168e-bd36-4c4d-a613-4d41cc39a08c",
           image: "https://yakuthemes.com/gameforest/img/game/game-2.jpg",
           title: "<h3>Rise of the Tomb Raider</h3>",
           description:
             "Tomb Raider, Lara becomes more than a survivor as she embarks on her first great."
         },
         {
-          id: "7a203670-0853-11e9-b568-0800200c9a66",
+          id: "d900496a-2f6c-43af-9178-c0b6821a082f",
           image: "https://yakuthemes.com/gameforest/img/game/game-3.jpg",
           title: "<h3>The Witcher 3: Wild Hunt</h3>",
           description:
@@ -161,7 +170,121 @@ const config = {
         }
       ]
     },
-    parent: "5224614e-25fc-42be-b90d-fbcafa9aad85",
+    parent: "3c2a4b6f-94c1-4926-b43b-9c10a73ecc74",
+    children: []
+  },
+  "f0785c8c-fe41-41cd-a93c-22eb8e7112ba": {
+    id: "f0785c8c-fe41-41cd-a93c-22eb8e7112ba",
+    type: "Section",
+    attributes: {
+      type: "row",
+      styles: {
+        paddingBottom: 30,
+        paddingTop: 30
+      }
+    },
+    parent: "336ab6b1-a1a8-45e3-a5c2-8ca2850f012d",
+    children: ["2e28a41d-5fcf-4df7-a2fe-1959fa693ff5"]
+  },
+  "2e28a41d-5fcf-4df7-a2fe-1959fa693ff5": {
+    id: "2e28a41d-5fcf-4df7-a2fe-1959fa693ff5",
+    type: "PlainTextMultiPicture",
+    attributes: {
+      items: [
+        {
+          image: "https://yakuthemes.com/gameforest/img/game/game-1.jpg"
+        },
+        {
+          image: "https://yakuthemes.com/gameforest/img/game/game-2.jpg"
+        },
+        {
+          image: "https://yakuthemes.com/gameforest/img/game/game-3.jpg"
+        },
+        {
+          image: "https://yakuthemes.com/gameforest/img/game/game-4.jpg"
+        },
+        {
+          image: "https://yakuthemes.com/gameforest/img/game/game-5.jpg"
+        },
+        {
+          image: "https://yakuthemes.com/gameforest/img/game/game-6.jpg"
+        }
+      ],
+      content:
+        "Quoniam, si dis placet, ab Epicuro loqui discimus. Ergo ita: non posse honeste vivi, nisi honeste vivatur? Saepe ab Aristotele, a Theophrasto mirabiliter est laudata per se ipsa rerum scientia; Quae quo sunt excelsiores, eo dant clariora indicia naturae. Duo Reges: constructio interrete. Illum mallem levares, quo optimum atque humanissimum virum, Cn. Et quidem iure fortasse, sed tamen non gravissimum est testimonium multitudinis. Quo modo autem philosophus loquitur?"
+    },
+    parent: "f0785c8c-fe41-41cd-a93c-22eb8e7112ba",
+    children: []
+  },
+  "225a6615-21ea-4866-97be-8fc33095e4aa": {
+    id: "225a6615-21ea-4866-97be-8fc33095e4aa",
+    type: "Section",
+    attributes: {
+      type: "row",
+      styles: {
+        paddingBottom: 30,
+        paddingTop: 30
+      }
+    },
+    parent: "336ab6b1-a1a8-45e3-a5c2-8ca2850f012d",
+    children: ["db58c1b0-8a76-477d-95e6-56a7e6fda3ec"]
+  },
+  "db58c1b0-8a76-477d-95e6-56a7e6fda3ec": {
+    id: "db58c1b0-8a76-477d-95e6-56a7e6fda3ec",
+    type: "GraphicPlate",
+    attributes: {
+      image: "https://yakuthemes.com/gameforest/img/blog/blog-1.jpg",
+      heading: "<h2>The best service products are rich</h2>",
+      content:
+        "Quoniam, si dis placet, ab Epicuro loqui discimus. Ergo ita: non posse honeste vivi, nisi honeste vivatur? Saepe ab Aristotele, a Theophrasto mirabiliter est laudata per se ipsa rerum scientia; Quae quo sunt excelsiores, eo dant clariora indicia naturae. Duo Reges: constructio interrete. Illum mallem levares, quo optimum atque humanissimum virum, Cn. Et quidem iure fortasse, sed tamen non gravissimum est testimonium multitudinis. Quo modo autem philosophus loquitur?"
+    },
+    parent: "225a6615-21ea-4866-97be-8fc33095e4aa",
+    children: []
+  },
+  "f9277f8c-e72e-4c4c-84c0-fae1a571780f": {
+    id: "f9277f8c-e72e-4c4c-84c0-fae1a571780f",
+    type: "Section",
+    attributes: {
+      type: "row",
+      styles: {
+        paddingBottom: 30,
+        paddingTop: 30
+      }
+    },
+    parent: "336ab6b1-a1a8-45e3-a5c2-8ca2850f012d",
+    children: ["5dab5f6f-9e04-4e37-aed0-35ddef6d6796"]
+  },
+  "5dab5f6f-9e04-4e37-aed0-35ddef6d6796": {
+    id: "5dab5f6f-9e04-4e37-aed0-35ddef6d6796",
+    type: "LargeSmallPicturePlate",
+    attributes: {
+      main: 2,
+      items: [
+        {
+          image:
+            "https://res.cloudinary.com/dmhahyfum/image/upload/v1546506572/2.png"
+        },
+        {
+          image:
+            "https://res.cloudinary.com/dmhahyfum/image/upload/v1546506656/3.png"
+        },
+        {
+          image:
+            "https://res.cloudinary.com/dmhahyfum/image/upload/v1546506260/1.png"
+        }
+      ]
+    },
+    parent: "f9277f8c-e72e-4c4c-84c0-fae1a571780f",
+    children: []
+  },
+  "04598659-9ccd-45f6-b749-4facd13e5eac": {
+    id: "04598659-9ccd-45f6-b749-4facd13e5eac",
+    type: "Page",
+    attributes: {
+      path: "/contact",
+      title: "Contact"
+    },
+    parent: "root",
     children: []
   }
 };

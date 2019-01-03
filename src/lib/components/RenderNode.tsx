@@ -3,6 +3,8 @@ import {
   Node as NodeType,
   PlainTextNode,
   MultiProductNode,
+  PlainTextMultiPictureNode,
+  LargeSmallPicturePlateNode,
   CarouselNode,
   GraphicPlateNode
 } from "sitebuilder.client";
@@ -12,6 +14,8 @@ import Carousel from "./templates/Carousel";
 import PlainText from "./templates/PlainText";
 import MultiProduct from "./templates/MultiProduct";
 import GraphicPlate from "./templates/GraphicPlate";
+import PlainTextMultiPicture from "./templates/PlainTextMultiPicture";
+import LargeSmallPicturePlate from "./templates/LargeSmallPicturePlate";
 
 interface OwnProps {
   current?: number;
@@ -38,7 +42,6 @@ const RenderNode: React.SFC<OwnProps> = props => {
         </>
       );
     case "Section": {
-      console.log(current);
       return (
         <Section node={node}>
           <Node node={node} current={current + 1} />
@@ -49,6 +52,12 @@ const RenderNode: React.SFC<OwnProps> = props => {
       return <PlainText node={node as PlainTextNode} />;
     case "MultiProduct":
       return <MultiProduct node={node as MultiProductNode} />;
+    case "PlainTextMultiPicture":
+      return <PlainTextMultiPicture node={node as PlainTextMultiPictureNode} />;
+    case "LargeSmallPicturePlate":
+      return (
+        <LargeSmallPicturePlate node={node as LargeSmallPicturePlateNode} />
+      );
     case "Carousel":
       return <Carousel node={node as CarouselNode} />;
     case "GraphicPlate":

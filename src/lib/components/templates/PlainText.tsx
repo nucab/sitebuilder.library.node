@@ -12,10 +12,10 @@ class PlainText extends React.Component<OwnProps> {
     if (!node) return null;
     const { heading, content } = node.attributes;
     return (
-      <div>
-        {renderHTML(heading)}
-        {renderHTML(content)}
-      </div>
+      <>
+        <div>{renderHTML(heading)}</div>
+        <div>{renderHTML(content)}</div>
+      </>
     );
   }
 }
