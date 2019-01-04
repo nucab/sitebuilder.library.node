@@ -1,6 +1,6 @@
 {
   "name": "sitebuilder.library.node",
-  "version": "0.0.25",
+  "version": "0.0.26",
   "description": "Stiebuilder library node.",
   "main": "./build/index.js",
   "types": "./build/lib/index.d.ts",
