@@ -8,42 +8,51 @@ import { HeaderNode, Styles } from "sitebuilder.client";
 
 interface OwnProps {
   header: HeaderNode | null;
+  onSubmit: (values: any) => void;
 }
 
-const HeaderPanel: React.SFC<OwnProps> = props => {
-  let template = 1;
-  let styles: Styles | null = null;
-  let navStyles: Styles | null = null;
-  let topStyles: Styles | null = null;
-  if (props.header) {
-    template = props.header.attributes.template;
+class HeaderPanel extends React.Component<OwnProps> {
+  render() {
+    let template = 1;
+    let styles: Styles | null = null;
+    let navStyles: Styles | null = null;
+    let topStyles: Styles | null = null;
+    if (this.props.header) {
+      template = this.props.header.attributes.template;
+    }
+    if (this.props.header && this.props.header.attributes.styles) {
+      styles = parseStyles(this.props.header.attributes.styles);
+    }
+    if (this.props.header && this.props.header.attributes.navStyles) {
+      navStyles = parseStyles(this.props.header.attributes.navStyles);
+    }
+    if (this.props.header && this.props.header.attributes.topStyles) {
+      topStyles = parseStyles(this.props.header.attributes.topStyles);
+    }
+    const headerProps = {
+      styles,
+      navStyles,
+      topStyles
+    };
+    switch (template) {
+      case 1:
+        return <Header1 onSubmit={this.handleSubmit} {...headerProps} />;
+      case 2:
+        return <Header2 onSubmit={this.handleSubmit} {...headerProps} />;
+      case 3:
+        return <Header3 onSubmit={this.handleSubmit} {...headerProps} />;
+      case 4:
+        return <Header4 onSubmit={this.handleSubmit} {...headerProps} />;
+      default:
+        return null;
+    }
   }
-  if (props.header && props.header.attributes.styles) {
-    styles = parseStyles(props.header.attributes.styles);
-  }
-  if (props.header && props.header.attributes.navStyles) {
-    navStyles = parseStyles(props.header.attributes.navStyles);
-  }
-  if (props.header && props.header.attributes.topStyles) {
-    topStyles = parseStyles(props.header.attributes.topStyles);
-  }
-  const headerProps = {
-    styles,
-    navStyles,
-    topStyles
+  handleSubmit = (values: any) => {
+    if (this.props.onSubmit) {
+      return this.props.onSubmit(values);
+    }
+    return values;
   };
-  switch (template) {
-    case 1:
-      return <Header1 {...headerProps} />;
-    case 2:
-      return <Header2 {...headerProps} />;
-    case 3:
-      return <Header3 {...headerProps} />;
-    case 4:
-      return <Header4 {...headerProps} />;
-    default:
-      return null;
-  }
-};
+}
 
 export default HeaderPanel;

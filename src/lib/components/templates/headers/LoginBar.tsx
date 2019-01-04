@@ -4,6 +4,7 @@ import SigninInlineForm from "./SigninInlineForm";
 
 export interface OwnProps {
   align?: "left" | "right";
+  onSubmit: (values: any) => void;
 }
 
 export default class LoginBar extends React.Component<OwnProps, any> {
@@ -17,8 +18,13 @@ export default class LoginBar extends React.Component<OwnProps, any> {
     }
     return (
       <div className={cx("d-flex", alignment)}>
-        <SigninInlineForm />
+        <SigninInlineForm onSubmit={this.handleSubmit} />
       </div>
     );
   }
+  handleSubmit = (values: any) => {
+    if (this.props.onSubmit) {
+      return this.props.onSubmit(values);
+    }
+  };
 }

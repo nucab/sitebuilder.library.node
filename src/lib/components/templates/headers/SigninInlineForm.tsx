@@ -1,13 +1,20 @@
 import * as React from "react";
-import { Form, FormGroup, Input, Button } from "reactstrap";
+import { FormGroup, Button } from "reactstrap";
 import RegisterModal from "./RegisterModal";
+import { Formik, Form, Field, FormikValues, FormikActions } from "formik";
 
 interface OwnProps {
   formInline?: boolean;
+  onSubmit: (values: FormValues) => void;
 }
 
 interface OwnState {
   showRegisterModal: boolean;
+}
+
+interface FormValues {
+  username: string;
+  password: string;
 }
 
 export default class SigninInlineForm extends React.Component<
@@ -23,47 +30,65 @@ export default class SigninInlineForm extends React.Component<
   render() {
     return (
       <div className="px-0 py-2">
-        <Form inline={this.props.formInline}>
-          <FormGroup className="mr-sm-2">
-            <Input
-              size={15}
-              type="username"
-              name="username"
-              placeholder="Username"
-            />
-          </FormGroup>
-          <FormGroup className="mr-sm-2">
-            <Input
-              type="password"
-              size={15}
-              name="password"
-              placeholder="Password"
-            />
-          </FormGroup>
-          {/* <FormGroup className="mr-sm-2">
-            <Input
-              className="form-control"
-              type="text"
-              name="valid"
-              placeholder="验证码"
-              size={10}
-            />
-          </FormGroup> */}
-          <Button type="submit" color="primary" className="mr-sm-2">
-            Login
-          </Button>
-          <Button color="primary" onClick={this.handleToggleRegisterModal}>
-            Register
-          </Button>
-          <RegisterModal
-            show={this.state.showRegisterModal}
-            onToggle={this.handleToggleRegisterModal}
-          />
-        </Form>
+        <Formik
+          initialValues={{
+            username: "",
+            password: ""
+          }}
+          onSubmit={(
+            values: FormValues,
+            { setSubmitting }: FormikActions<FormikValues>
+          ) => {
+            this.handleSubmit(values);
+            setSubmitting(false);
+          }}
+          render={props => {
+            const { values } = props;
+            return (
+              <Form className="form-inline">
+                <FormGroup className="mr-sm-2">
+                  <Field
+                    className="form-control"
+                    size={15}
+                    type="username"
+                    name="username"
+                    placeholder="Username"
+                  />
+                </FormGroup>
+                <FormGroup className="mr-sm-2">
+                  <Field
+                    className="form-control"
+                    type="password"
+                    size={15}
+                    name="password"
+                    placeholder="Password"
+                  />
+                </FormGroup>
+                <Button type="submit" color="primary" className="mr-sm-2">
+                  Login
+                </Button>
+                <Button
+                  color="primary"
+                  onClick={this.handleToggleRegisterModal}
+                >
+                  Register
+                </Button>
+                <RegisterModal
+                  show={this.state.showRegisterModal}
+                  onToggle={this.handleToggleRegisterModal}
+                />
+              </Form>
+            );
+          }}
+        />
       </div>
     );
   }
-
+  handleSubmit = (values: FormValues) => {
+    if (this.props.onSubmit) {
+      return this.props.onSubmit(values);
+    }
+  };
   handleToggleRegisterModal = () => {
     this.setState({ showRegisterModal: !this.state.showRegisterModal });
   };

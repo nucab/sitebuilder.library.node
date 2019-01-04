@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Config } from "sitebuilder.client";
-import { FooterPanel, Node } from "../lib";
+import { HeaderPanel, FooterPanel, Node } from "../lib";
 import defaults from "./config";
 // import "spectre.css/dist/spectre.css";
 import "spectre.css/src/spectre.scss";
@@ -33,7 +33,7 @@ class App extends React.Component<OwnProps, OwnState> {
     if (!page) return null;
     return (
       <Container size="xl">
-        {/* <HeaderPanel header={config.header} /> */}
+        <HeaderPanel header={config.header} />
         <Node node={page} />
         <FooterPanel footer={config.footer} />
       </Container>
